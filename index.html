@@ -24,7 +24,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+      .rotate-90 {
+          transform: rotate(90deg);
+      }
+  </style>
+
+  <title>BaRiFlex: A Robotic Gripper with Versatility and Collision Robustness for Robot Learning</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -43,6 +51,10 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
+
+
+  
 </head>
 <body>
 
@@ -197,29 +209,51 @@
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        <h3 class="title is-3">Design Cencept</h3>
+        <h5 style="text-align: center; padding-bottom: 10px;"> BaRiFlex demonstrates universial performance by conducting grasping versatility tasks, hong-horizon tasks, and robustness RL grasping tests.</h5>
+        <div class="columns is-centered">
+          <div class="column is-5">
+           <h4 class="title is-4">RL Test Result</h4>
+          <img src="./static/images/RL_Learning_Test.PNG" alt="Grasping Versatility Result" width="100%">
+          </div>
+          <div class="column is-5">
+           <h4 class="title is-4">RL Test Result</h4>
+          <img src="./static/images/RL_Learning_Test.PNG" alt="Grasping Versatility Result" width="100%">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
         <h3 class="title is-3">Robustness Test</h3>
         <div class="columns is-centered">
-          <div class="column is-2">
+          <div class="column is-3">
            <h4 class="title is-4">Rigid</h4>
             <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/Robustness_Test/Rigid.mov" width="100%" style="border-radius:10px;"></video>
           </div>
-          <div class="column is-2">
+          <div class="column is-3">
            <h4 class="title is-4">Soft 95A</h4>
             <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/Robustness_Test/95A.mov" width="100%" style="border-radius:10px;"></video>
           </div>
-          <div class="column is-2">
+          <div class="column is-3">
            <h4 class="title is-4">Soft 87A</h4>
             <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/Robustness_Test/87A.mov" width="100%" style="margin: -4px; border: 8px; border-radius:10px;"></video>
             <!-- <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/requirements/RL_test.mp4" width="100%" style="margin: -4px; border: 8px; border-radius:10px; border-style: solid; border-color: red;"></video> !-->
           </div>
-          <div class="column is-2">
+          <div class="column is-3">
            <h4 class="title is-4">BaRiFlex</h4>
             <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/Robustness_Test/BaRiFlex.mov" width="100%" style="border-radius:10px;"></video>
           </div>
-          <div class="column is-4">
-           <h4 class="title is-4">Result</h4>
-            <img src="./static/images/Compliance_Result.png" alt="Robustness/Compliance Result" width="98%">
-          </div>
+        </div>
+        <div class="column is-centered has-text-centered">
+         <h4 class="title is-4">Robustness Test Result</h4>
+          <img src="./static/images/Compliance_Result.png" alt="Robustness/Compliance Result" width="50%">
         </div>
       </div>
     </div>
@@ -273,18 +307,46 @@
             <!-- <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/requirements/RL_test.mp4" width="100%" style="margin: -4px; border: 8px; border-radius:10px; border-style: solid; border-color: red;"></video> !-->
           </div>
         </div>
+        <div class="column is-centered has-text-centered">
+         <h4 class="title is-4">Grasping Versatility Result</h4>
+          <img src="./static/images/Grasp_Versatility.PNG" alt="Grasping Versatility Result" width="50%">
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="section"> 
+<section class="section">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h3 class="title is-3">Task Versatility</h3>
-        <h5 style="text-align: center; padding-bottom: 10px;"> LEAP hand demonstrates side to side dexterity in both the finger up and finger down configuration. <br> This is thanks to its universal abduction-adduction mechanism.</h5>
+        <div class="columns is-centered">
+          <div class="column is-4">
+           <h4 class="title is-4">Open Door1</h4>
+            <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/Task_Versatility/Door1.mov" width="100%" style="border-radius:10px;"></video>
+          </div>
+          <div class="column is-4">
+           <h4 class="title is-4">Open Door2</h4>
+            <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/Task_Versatility/Door2_Rotate.mov" width="100%" style="border-radius:10px;"></video>
+          </div>
+          <div class="column is-4">
+           <h4 class="title is-4">Open Fridge</h4>
+            <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/Task_Versatility/Fridge.mov" width="100%" style="margin: -4px; border: 8px; border-radius:10px;"></video>
+            <!-- <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/requirements/RL_test.mp4" width="100%" style="margin: -4px; border: 8px; border-radius:10px; border-style: solid; border-color: red;"></video> !-->
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-4">
+           <h4 class="title is-4">Catch the ball1</h4>
+            <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/Task_Versatility/Catch_ball_Soft.mov" width="100%" style="border-radius:10px;"></video>
+          </div>
+          <div class="column is-4">
+           <h4 class="title is-4">Catch the ball2</h4>
+            <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/Task_Versatility/Catch_ball_Tennis.mov" width="100%" style="border-radius:10px;"></video>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -296,11 +358,22 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h3 class="title is-3">Real World Reinforcement Learning Test</h3>
-        <h5 style="text-align: center; padding-bottom: 10px;"> LEAP hand demonstrates side to side dexterity in both the finger up and finger down configuration. <br> This is thanks to its universal abduction-adduction mechanism.</h5>
+        <h5 style="text-align: center; padding-bottom: 10px;"> Test1. <br> Test2.</h5>
+        <div class="columns is-centered">
+          <div class="column is-5">
+           <h4 class="title is-4">Rigid</h4>
+            <video class="center" playsinline="" autoplay="" loop="" muted="" src="./static/videos/requirements/RL_test.mp4" width="100%" style="border-radius:10px;"></video>
+          </div>
+          <div class="column is-5">
+           <h4 class="title is-4">RL Test Result</h4>
+          <img src="./static/images/RL_Learning_Test.PNG" alt="Grasping Versatility Result" width="100%">
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 <!--BibTex citation -->
