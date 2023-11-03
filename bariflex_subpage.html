@@ -27,11 +27,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-      .rotate-90 {
-          transform: rotate(90deg);
-      }
-  </style>
   
   <style>
     table {
@@ -100,7 +95,7 @@
       <div class="columns is-centered">
         <div class="column is-full-width">
           <h3 class="title is-3" style="text-align: center; padding-bottom: 10px;">
-            <bold>Parts Information</bold>
+            <bold>Manufacturing Instruction</bold>
           </h3>
         </div>
       </div>
@@ -344,6 +339,7 @@
       </div>
     </div>
   </section>
+  
   <section class="section">
     <div class="container">
       <div class="columns is-centered">
@@ -443,7 +439,7 @@
             <div class="card w-25">
               <div class="card-body">
                 <h5 class="card-title" style="font-weight:bold">Software:</h5>
-                <p class="card-text">I recommend <a href="https://www.prusa3d.com/page/prusaslicer_424/">Prusa Slicer</a>, choose your correct printer.</p>
+                <p class="card-text">I recommend <a href="https://www.prusa3d.com/page/prusaslicer_424/">Prusa Slicer</a>, choose the correct software based on your printer.</p>
               </div>
             </div>
             <br>
@@ -468,6 +464,212 @@
     </div>
   </section>
 
+<section class="section"> 
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-3">Electronic Instruction</h3>
+        <!-- <h5 style="text-align: center; padding-bottom: 10px;"> Test1. <br> Test2.</h5> !-->
+        <div class="columns is-centered">
+          <div class="column is-8">
+           <h5 class="title is-5">Text Instruction</h5>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                1) Use the soldering iron and wire cutter, connect the GL60 encoder pins to the small cables for the ODrive motor driver as shown in Encoder wiring diagram. 
+              </div>
+            </div>
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                2) Connect the 24 power supply and A,B,C phase motor cables to the ODrive motor driver as illustrated in Power Cable Diagram.
+              </div>
+            </div>
+
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                3) Connect the ODrive to the Host PC using USB-C cable.
+              </div>
+            </div>
+            
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                4) Follow the Cabliration Instruction video and finish the motor configuration.
+              </div>
+            </div>
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                5) Set the below motor properties<br>
+                <br>
+                In "Power Source" page: <br>
+                DC bus overvoltage: 26 <br>
+                DC bus undervoltage: 26 <br>
+                DC max positive current: 5 <br>
+                DC max nagative current: -5 <br>
+                <br>
+                In "Motor" Setup page: <br>
+                Type: Gimbal <br>
+                Phase resistance : 1.2 <br>
+                Pole pairs: 14 <br>
+                KV: 55 <br>
+                Current limit: 3.1 <br>
+                Motor calib. current: 3.1 <br>
+                Motor calib. voltage: 24 <br>
+                Lock-in spin current: 0.1 <br>
+                <br>
+                In "Encoder Paramater" page: <br>
+                Type: SPI(AMS protocol) <br>
+                nCS pin: GPIO17 <br>
+                <br>
+                In "Control mode" page<br>
+                Control mode: Filtered Position Control <br>
+                Position Setpoint: USB/UART/CAN <br>
+                Bandwidth: 15 <br>
+                Soft velocity limit: 10 <br>
+                Hard velocity limit: 10 <br>
+                Torque limit: 0.6 <br>
+              </div>
+            </div>
+            
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                6) Go to the "Apply & Calibrate" page <br>
+                6-1) Click "Erase & Reboot" button in Erease old configuration step<br>
+                6-2) Click "Apply new configuration" button in Apply new configuration step<br>
+                6-3) Click "Save & Reboot" button in Save to non-volatile memory step<br>
+                6-4) Click "Run Calibration Sequence" button in Calibrate step and wait until calibration is done<br>
+                6-5) Click "Save & Reboot" button in Save to non-volatile memory step<br>
+              </div>
+            </div>
+            
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                7) Go to the Dashboard on the top of the page.<br>
+                7-1) Change the Position Gain, velocity Gain and velocity Integrator Gain as below.<br>
+                (This is the empirical value. You can find the better tuning values by modifying those.) <br>
+                Position Gain: 20<br>
+                Velocity Gain: 0.3<br>
+                Velocity Integrator Gain: 0.333<br>
+              </div>
+            </div>
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                8) All electronic setup is completed. Go to the <a href="bariflex.html" style="font-weight:bold">"Code"</a> page and follow the instruction.
+              </div>
+            </div>
+          </div>
+          <div class="column is-7">
+           <h4 class="title is-5">Encoder Wiring Diagram</h4>
+            <img src="./static/images/GL60_wiring.jpg" alt="GL60_Wiring" width="100%">
+            <br><br>
+           <h4 class="title is-5">3-Phase Motor and Power Cable Wiring Diagram</h4>
+            <img src="./static/images/Motor_wiring.jpg" alt="Motor_Wiring" width="100%">
+            <br><br>
+           <h4 class="title is-5">Calibration Instruction Video</h4>
+            <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/gGHM64zFgYQ?si=6R65zrKDjacz-7rX" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section"> 
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-3">Design Instruction</h3>
+        <!-- <h5 style="text-align: center; padding-bottom: 10px;"> Test1. <br> Test2.</h5> !-->
+        <div class="columns is-centered">
+          <div class="column is-8">
+           <h5 class="title is-5">Text Instruction</h5>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                1)  
+              </ul>
+              </div>
+            </div>
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                2) 
+              </div>
+            </div>
+
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                3)
+              </div>
+            </div>
+            
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                4) 
+              </ul>
+              </div>
+            </div>
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                5) 
+              </div>
+            </div>
+            
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                6) 
+              </div>
+            </div>
+            
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                7) 
+              </div>
+            </div>
+            <br>
+            <div class="card w-25">
+              <div class="card-body" style="text-align: left;">
+                8)
+              </div>
+            </div>
+          </div>
+          <div class="column is-7">
+           <h4 class="title is-5">Design Instruction Video</h4>
+            <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/gGHM64zFgYQ?si=6R65zrKDjacz-7rX" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="large-font bottom_buttons" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+        <br>
+        <p>Contact us at goochul@utexas.edu if you have any questions.</p>
+      </div>
+    </div>
+  </footer>
+
+
+<!--
   <section class="section">
     <div class="container">
       <div class="columns is-centered">
@@ -498,18 +700,6 @@
       </div>
     </div>
   </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <!-- <a class="large-font bottom_buttons" disabled>
-        <i class="fab fa-github"></i>
-      </a> -->
-        <br>
-        <!-- <p>Dexbotics LLC.</p> -->
-      </div>
-    </div>
-  </footer>
-
+-->
 
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
